@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1093481105258",
+    "project_id": "storyline-7fc5f",
+    "storage_bucket": "storyline-7fc5f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1093481105258:android:f1939fa952e882087ec713",
+        "android_client_info": {
+          "package_name": "com.ephirium.storyline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1093481105258-98vrrh56smb5ht5g6jut97c2m12gt9g5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzm7EPlo-hnyKx4QvwC9L8dLvqqSgmnt0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1093481105258-98vrrh56smb5ht5g6jut97c2m12gt9g5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

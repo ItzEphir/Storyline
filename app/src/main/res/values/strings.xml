@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name" translatable="false">Storyline</string>
+    <string name="default_text">Default</string>
+    <string name="home">Home</string>
+    <string name="create">Create</string>
+    <string name="profile">Profile</string>
+    <string name="post_image_description">Post Image</string>
+    <string name="launcher_icon_description">Launcher Icon</string>
+    <string name="create_story_description"><b>Write</b> your story now <b>:)</b></string>
+    <string name="make_bold"><b>Bold</b></string>
+    <string name="make_italic"><i>Italic</i></string>
+    <string name="make_underline"><u>Underline</u></string>
+    <string name="set_format">Format</string>
+    <string name="profile_background_description">Background image for profile</string>
+    <string name="title_activity_auth">AuthActivity</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="signup_recommendation">Don`t have an account? Sign up!</string>
+    <string name="signin_recommendation">Already have an account? Sign in!</string>
+    <string name="sign_up">Sign up</string>
+    <string name="username">Name</string>
+    <string name="user_bio">Bio</string>
+    <string name="email">Email</string>
+    <string name="display_name">Display name</string>
+    <string name="title_story_description">Enter story`s title</string>
+    <string name="add_chapter">Add Chapter</string>
+    <string name="chapter_enter_title">Enter chapter`s title</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
