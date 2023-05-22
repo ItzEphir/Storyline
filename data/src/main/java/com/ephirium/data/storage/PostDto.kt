@@ -8,5 +8,5 @@ data class PostDto(
     override var name: String = "",
     override var description: String = "",
     override var author: String = "",
-    override var chapters: List<String>,
+    override var chapters: List<String> = ArrayList(),
 ) : PostDtoBase

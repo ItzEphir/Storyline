@@ -6,26 +6,30 @@ import com.ephirium.storyline.model.Post;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PostCallback{
-    private final List<PostOnClickCallback> onClickCallbacks = new ArrayList<>();
-    private final List<PostOnMoveCallback> onMoveCallbacks = new ArrayList<>();
-    private final List<PostOnSwipeCallback> onSwipeCallbacks = new ArrayList<>();
+import kotlin.Suppress;
 
-    public PostCallback(PostOnClickCallback callback){
+public class PostCallback{
+    private final List<OnClickCallback<Post>> onClickCallbacks = new ArrayList<>();
+    private final List<OnMoveCallback> onMoveCallbacks = new ArrayList<>();
+    private final List<OnSwipeCallback> onSwipeCallbacks = new ArrayList<>();
+
+    public PostCallback(OnClickCallback<Post> callback){
         onClickCallbacks.add(callback);
     }
 
-    public PostCallback addOnClickCallback(PostOnClickCallback callback){
+    @Suppress(names = "Unused")
+    public PostCallback addOnClickCallback(OnClickCallback<Post> callback){
         onClickCallbacks.add(callback);
         return this;
     }
 
-    public PostCallback addOnMoveCallback(PostOnMoveCallback callback){
+    @Suppress(names = "Unused")
+    public PostCallback addOnMoveCallback(OnMoveCallback callback){
         onMoveCallbacks.add(callback);
         return this;
     }
 
-    public PostCallback addOnSwipeCallback(PostOnSwipeCallback callback){
+    public PostCallback addOnSwipeCallback(OnSwipeCallback callback){
         onSwipeCallbacks.add(callback);
         return this;
     }
@@ -34,10 +38,12 @@ public class PostCallback{
         onClickCallbacks.forEach(callback -> callback.onClick(post));
     }
 
+    @Suppress(names = "Unused")
     public void onMove(int from, int to){
         onMoveCallbacks.forEach(callback -> callback.onMove(from, to));
     }
 
+    @Suppress(names = "Unused")
     public void onSwipe(int direction, int position){
         onSwipeCallbacks.forEach(callback -> callback.onSwipe(direction, position));
     }

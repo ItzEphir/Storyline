@@ -46,5 +46,10 @@
         android:id="@+id/tabFragment"
         android:name="com.ephirium.storyline.ui.fragment.TabFragment"
         android:label="fragment_tab"
-        tools:layout="@layout/fragment_tab" />
+        tools:layout="@layout/fragment_tab" >
+        <action
+            android:id="@+id/action_tabFragment_to_read_post_graph"
+            app:destination="@id/read_post_graph" />
+    </fragment>
+    <include app:graph="@navigation/read_post_graph" />
 </navigation>

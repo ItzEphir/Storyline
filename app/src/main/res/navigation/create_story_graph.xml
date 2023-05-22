@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/createStoryFragment"
-        android:name="com.ephirium.storyline.ui.fragment.CreateStoryFragment"
+        android:name="com.ephirium.storyline.ui.fragment.CreatePostFragment"
         android:label="fragment_create_story"
-        tools:layout="@layout/fragment_create_story" />
+        tools:layout="@layout/fragment_create_post" />
 </navigation>

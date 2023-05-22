@@ -1,10 +1,9 @@
 package com.ephirium.storyline.model
 
-import android.text.Spannable
 import com.ephirium.storyline.common.delegate.DelegateItem
 
-data class Chapter(val name: String, val text: Spannable) : DelegateItem {
-    override fun getDelegateId(): String = name
+data class Chapter(val name: String, val index: Int) : DelegateItem {
+    override fun getDelegateId(): String = index.toString()
 
-    override fun getDelegateContent(): String = text.toString()
+    override fun getDelegateContent(): String = name
 }
