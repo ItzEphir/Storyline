@@ -6,4 +6,5 @@ interface PostDtoBase : ItemDto {
     var description: String
     var author: String
     var chapters: List<String>
+    var mimeType: String
 }

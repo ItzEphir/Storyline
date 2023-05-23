@@ -27,6 +27,7 @@
             android:layout_height="wrap_content"
             android:text="@string/default_text"
             android:textSize="16sp"
+            android:maxLines="999999999"
             android:textColor="@color/black"
             android:layout_margin="5dp"/>
     </ScrollView>

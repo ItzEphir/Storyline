@@ -6,13 +6,15 @@ import com.ephirium.domain.dto.UserDtoBase
 import com.ephirium.domain.repository.LoadUserRepositoryBase
 import kotlinx.coroutines.runBlocking
 
-class LoadUserUseCase<T : UserDtoBase>(private val repository: LoadUserRepositoryBase<T>) {
+class LoadUserUseCase<T : UserDtoBase?>(private val repository: LoadUserRepositoryBase<T>) {
 
+    @Suppress("Unused")
     fun observeFromSharedPreferences(id: String, dataListener: DataConstListener<String?>) =
         runBlocking {
             repository.observeSharedPref(id, dataListener)
         }
 
+    @Suppress("Unused")
     fun observeUser(
         email: String,
         dataListener: DataConstListener<T>,

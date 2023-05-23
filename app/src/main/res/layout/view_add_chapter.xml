@@ -2,35 +2,37 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    android:layout_margin="5dp">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/title_layout"
+        android:id="@+id/chapter_title_layout"
         style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="@string/title_story_description"
+        android:hint="@string/chapter_enter_title"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/image_button"
+        app:layout_constraintRight_toLeftOf="@id/add_chapter_button"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/title"
+            android:id="@+id/chapter_title"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/image_button"
+        android:id="@+id/add_chapter_button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/add_image"
-        android:lines="2"
-        android:maxLines="2"
-        android:minLines="2"
-        app:layout_constraintBottom_toBottomOf="@id/title_layout"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/add_chapter"
+        android:textSize="12sp"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="@id/chapter_title_layout"
+        app:layout_constraintLeft_toRightOf="@id/chapter_title_layout"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/title_layout" />
+        app:layout_constraintTop_toTopOf="@id/chapter_title_layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

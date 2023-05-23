@@ -9,5 +9,14 @@
         android:id="@+id/createStoryFragment"
         android:name="com.ephirium.storyline.ui.fragment.CreatePostFragment"
         android:label="fragment_create_story"
-        tools:layout="@layout/fragment_create_post" />
+        tools:layout="@layout/fragment_create_post" >
+        <action
+            android:id="@+id/action_createStoryFragment_to_writeChapterFragment"
+            app:destination="@id/writeChapterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/writeChapterFragment"
+        android:name="com.ephirium.storyline.ui.fragment.WriteChapterFragment"
+        android:label="fragment_write_chapter"
+        tools:layout="@layout/fragment_write_chapter" />
 </navigation>

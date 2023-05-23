@@ -9,4 +9,5 @@ data class PostDto(
     override var description: String = "",
     override var author: String = "",
     override var chapters: List<String> = ArrayList(),
+    override var mimeType: String = "",
 ) : PostDtoBase

@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import by.kirich1409.viewbindingdelegate.viewBinding
-import com.ephirium.common.log.log
 import com.ephirium.storyline.R
 import com.ephirium.storyline.databinding.FragmentPostPageBinding
 import com.ephirium.storyline.presentation.PostViewModel
@@ -42,6 +41,8 @@ class PostPageFragment : Fragment(R.layout.fragment_post_page) {
             viewModel.observePosts()
         }
 
-        viewModel.posts.observe(requireActivity()) { posts -> run { log("Cool"); adapter.posts = posts } }
+        viewModel.posts.observe(requireActivity()) { posts ->
+            adapter.posts = posts
+        }
     }
 }

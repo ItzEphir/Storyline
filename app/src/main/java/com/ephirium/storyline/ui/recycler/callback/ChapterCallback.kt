@@ -12,8 +12,9 @@ class ChapterCallback() {
     }
 
     @Suppress("Unused")
-    fun addOnClickCallback(onClickCallback: OnClickCallback<Chapter>) {
+    fun addOnClickCallback(onClickCallback: OnClickCallback<Chapter>) : ChapterCallback {
         onClickCallbacks.add(onClickCallback)
+        return this
     }
 
     fun onClick(chapter: Chapter) {

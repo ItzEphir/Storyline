@@ -12,10 +12,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 class LoadUserRepository(override val sharedPreferences: SharedPreferences) :
-    LoadUserRepositoryBase<UserDto> {
+    LoadUserRepositoryBase<UserDto?> {
     override fun observe(
         email: String,
-        dataListener: DataConstListener<UserDto>,
+        dataListener: DataConstListener<UserDto?>,
         errorListener: ErrorListener
     ) {
         FirebaseFirestore.getInstance().collection("users").whereEqualTo("email", email)
@@ -24,7 +24,17 @@ class LoadUserRepository(override val sharedPreferences: SharedPreferences) :
                     error?.let { logError(error.toString()) }
 
                     value?.let {
-                        it.toObjects(UserDto::class.java)[0]?.let { it1 -> dataListener.onChange(it1) }
+                        val data = it.toObjects(UserDto::class.java)
+                        if (data.isNotEmpty()) {
+                            it.toObjects(UserDto::class.java)[0]?.let { it1 ->
+                                dataListener.onChange(
+                                    it1
+                                )
+                            }
+                        }
+                        else{
+                            dataListener.onChange(null)
+                        }
                     }
                 }
             }

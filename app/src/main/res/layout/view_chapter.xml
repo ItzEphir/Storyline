@@ -3,23 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="10dp"
     android:backgroundTint="?attr/colorButtonNormal"
-    app:cardCornerRadius="20dp"
-    android:layout_margin="10dp">
+    app:cardCornerRadius="20dp">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/title_layout"
-        style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:hint="@string/chapter_enter_title">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/chapter_title"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"/>
-    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/default_text"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:textColor="?attr/colorPrimaryVariant" />
 
 </androidx.cardview.widget.CardView>

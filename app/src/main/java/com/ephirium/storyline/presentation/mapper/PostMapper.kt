@@ -11,10 +11,22 @@ fun convert(posts: List<PostDto>): Sequence<Post> =
                     it.name,
                     it.description,
                     it.author,
-                    "${it.id}.jpg",
+                    "${it.id}.${it.mimeType}",
                     convert(it.chapters),
                     it
                 )
             )
         }
     }
+
+@Suppress("Unused")
+fun PostDto.convert(): Post {
+    return Post(
+        name = this.name,
+        description = this.description,
+        author = this.author,
+        source = "${this.id}.${this.mimeType}",
+        chapters = convert(this.chapters),
+        connectedPostDto = this
+    )
+}

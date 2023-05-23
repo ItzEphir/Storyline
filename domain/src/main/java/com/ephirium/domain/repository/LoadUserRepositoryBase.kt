@@ -5,7 +5,7 @@ import com.ephirium.common.listener.DataConstListener
 import com.ephirium.common.listener.ErrorListener
 import com.ephirium.domain.dto.UserDtoBase
 
-interface LoadUserRepositoryBase<T : UserDtoBase>{
+interface LoadUserRepositoryBase<T : UserDtoBase?>{
 
     val sharedPreferences: SharedPreferences
 

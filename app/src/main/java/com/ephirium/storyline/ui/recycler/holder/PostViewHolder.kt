@@ -5,7 +5,6 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.ephirium.common.listener.DataConstListener
 import com.ephirium.common.listener.ErrorListener
-import com.ephirium.common.log.log
 import com.ephirium.common.log.logError
 import com.ephirium.data.repository.PostImageRepository
 import com.ephirium.domain.usecase.PostImageUseCase
@@ -21,7 +20,6 @@ class PostViewHolder(private val callback: PostCallback, private val binding: Vi
 
     fun bind(post: Post) {
 
-        log("K")
         binding.progressBar.visibility = View.VISIBLE
         if (post.drawable == null) {
             postImageUseCase.observeImage(post.source,

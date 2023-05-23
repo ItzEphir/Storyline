@@ -22,7 +22,7 @@ class MainViewModel(application: Application, sharedPreferences: SharedPreferenc
     private val mutCurrentUser = MutableLiveData<UserDto?>()
     val currentUser: LiveData<UserDto?> = mutCurrentUser
 
-    private val loadUserUseCase: LoadUserUseCase<UserDto> =
+    private val loadUserUseCase: LoadUserUseCase<UserDto?> =
         LoadUserUseCase(LoadUserRepository(sharedPreferences))
     private val saveUserUseCase: SaveUserUseCase =
         SaveUserUseCase(SaveUserRepository(sharedPreferences))

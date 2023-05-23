@@ -27,4 +27,7 @@
     <string name="add_chapter">Add Chapter</string>
     <string name="chapter_enter_title">Enter chapter`s title</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="create_post">Create post</string>
+    <string name="end_edit">End Edit</string>
+    <string name="add_image">Add image</string>
 </resources>

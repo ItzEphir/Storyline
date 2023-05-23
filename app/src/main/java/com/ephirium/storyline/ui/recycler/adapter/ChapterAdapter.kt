@@ -3,7 +3,7 @@ package com.ephirium.storyline.ui.recycler.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
-import com.ephirium.storyline.databinding.ViewConstChapterBinding
+import com.ephirium.storyline.databinding.ViewChapterBinding
 import com.ephirium.storyline.model.Chapter
 import com.ephirium.storyline.ui.recycler.callback.ChapterCallback
 import com.ephirium.storyline.ui.recycler.holder.ChapterViewHolder
@@ -20,8 +20,8 @@ class ChapterAdapter(private val callback: ChapterCallback) : Adapter<ChapterVie
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChapterViewHolder {
         return ChapterViewHolder(
-            callback,
-            ViewConstChapterBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ViewChapterBinding.inflate(LayoutInflater.from(parent.context), parent, false),
+            callback
         )
     }
 
